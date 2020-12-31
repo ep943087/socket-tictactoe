@@ -48,7 +48,7 @@ io.on("connection", (socket) => {
       io.to(game.id2).emit("game-update", {
         game: game.game,
         yourTurn: true,
-        otherUser: user2.username,
+        otherUser: user1.username,
       });
     }
   };
