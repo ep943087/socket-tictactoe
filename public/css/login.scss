@@ -1,6 +1,7 @@
 @import "shared.scss";
 
 .login {
+  @extend .content;
   h1 {
     margin-bottom: 20px;
   }

@@ -100,6 +100,7 @@ footer {
   margin-top: 5rem;
   background-color: $text-color;
   animation: form-down;
+  animation-iteration-count: 1;
   animation-duration: 0.5s;
   border-radius: 0.8rem;
   padding: 1rem;

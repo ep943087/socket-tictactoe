@@ -98,19 +98,28 @@ footer {
     transform: rotateZ(0);
   }
 }
-.content {
+.content, .login {
   height: 300px;
   width: 98%;
   max-width: 450px;
   margin-top: 5rem;
   background-color: white;
   animation: form-down;
+  animation-iteration-count: 1;
   animation-duration: 0.5s;
   border-radius: 0.8rem;
   padding: 1rem;
   color: #0c0032;
 }
 
+@keyframes form-down {
+  from {
+    transform: translateY(-400px);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
 .login h1 {
   margin-bottom: 20px;
 }
@@ -134,15 +143,6 @@ footer {
 main {
   display: flex;
   justify-content: center;
-}
-
-@keyframes form-down {
-  from {
-    transform: translateY(-400px);
-  }
-  to {
-    transform: translateY(0);
-  }
 }
 
 /*# sourceMappingURL=login.css.map */

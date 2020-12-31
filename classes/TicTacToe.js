@@ -70,7 +70,7 @@ class TicTacToe {
     const dia1 = this.sumDia1();
     const dia2 = this.sumDia2();
     if (dia1 === 3 || dia2 === 3) return 1;
-    else if (dia2 === 75 || dia2 === 75) return 2;
+    else if (dia1 === 75 || dia2 === 75) return 2;
 
     if (scratch) return -1;
 
