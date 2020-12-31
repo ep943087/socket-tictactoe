@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/login.css">
+</head>
+<body>
+    <header>
+        <div class="main-brand">
+            <a href='/'>Tic-Tac-Toe</a>
+        </div>
+        <nav class="main-nav">
+            <div class="main-nav__item">
+                <a href="/">Join</a>
+            </div>
+            <div class="main-nav__item">
+                <a href="/">About</a>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div class="content login">
+            <h1>Join a Game!</h1>
+            <form method="get" action="/waiting">
+                <input placeholder="Username" name="username" id='username' type="text" />
+                <input type="submit" />
+            </form>
+        </div>
+    </main>
+    <footer>
+        &copy eliasproctor.com
+    </footer>
+    <script>
+        document.querySelector('#username').focus();
+    </script>
+</body>
+</html>

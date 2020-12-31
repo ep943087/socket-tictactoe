@@ -1,0 +1,68 @@
+@import "shared.scss";
+
+$waiting-content: "Waiting for player";
+
+main {
+  display: flex;
+  justify-content: center;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.game {
+  width: 100%;
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 1px;
+  height: 80%;
+  div {
+    background-color: grey;
+  }
+}
+
+.game-block {
+  font-size: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.fact {
+  color: $primary-color;
+}
+
+.waiting {
+  &:before {
+    animation: waiting;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    font-size: 2rem;
+    content: $waiting-content;
+  }
+}
+
+@keyframes waiting {
+  from {
+    content: $waiting-content;
+  }
+  25% {
+    content: $waiting-content + ".";
+  }
+  50% {
+    content: $waiting-content + "..";
+  }
+  75% {
+    content: $waiting-content +"...";
+  }
+  to {
+    content: $waiting-content;
+  }
+}

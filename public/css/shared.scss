@@ -1,0 +1,116 @@
+@import "variables.scss";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  color: $text-color;
+}
+
+body {
+  font-family: sans-serif;
+  background-color: white;
+  display: grid;
+  grid-template-rows: 4rem 1fr auto;
+  grid-template-areas: "head" "main" "footer";
+  border-collapse: collapse;
+}
+
+header {
+  background-color: $primary-color;
+  grid-area: head;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+main {
+  background-color: $light-color;
+  grid-area: main;
+}
+
+footer {
+  border: 1px solid $dark-color;
+  grid-area: footer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  background-color: $secondary-color;
+  color: $text-color;
+}
+
+.main-nav {
+  display: flex;
+}
+
+@mixin header-nav {
+  padding: 0.5rem 1rem;
+  background-color: $dark-color;
+  border-radius: 5px;
+  a {
+    color: $text-color;
+    text-decoration: none;
+  }
+  &:hover {
+    cursor: pointer;
+    animation: wiggle;
+    animation-duration: 400ms;
+    animation-iteration-count: infinite;
+  }
+}
+
+.main-nav__item {
+  margin: 0 25px;
+  @include header-nav();
+}
+
+.main-brand {
+  margin: 0 25px;
+  @include header-nav();
+}
+
+@keyframes wiggle {
+  from {
+    transform: rotateZ(0);
+  }
+  25% {
+    transform: rotateZ(2.5deg);
+  }
+  50% {
+    transform: rotateZ(0);
+  }
+  75% {
+    transform: rotateZ(-2.5deg);
+  }
+  to {
+    transform: rotateZ(0);
+  }
+}
+
+.content {
+  height: 300px;
+  width: 98%;
+  max-width: 450px;
+  margin-top: 5rem;
+  background-color: $text-color;
+  animation: form-down;
+  animation-duration: 0.5s;
+  border-radius: 0.8rem;
+  padding: 1rem;
+  color: $dark-color;
+}
+
+@keyframes form-down {
+  from {
+    transform: translateY(-400px);
+  }
+  to {
+    transform: translateY(0);
+  }
+}

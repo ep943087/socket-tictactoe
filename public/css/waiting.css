@@ -1,0 +1,185 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  color: white;
+}
+
+body {
+  font-family: sans-serif;
+  background-color: white;
+  display: grid;
+  grid-template-rows: 4rem 1fr auto;
+  grid-template-areas: "head" "main" "footer";
+  border-collapse: collapse;
+}
+
+header {
+  background-color: #3500d3;
+  grid-area: head;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+main {
+  background-color: #6b3aff;
+  grid-area: main;
+}
+
+footer {
+  border: 1px solid #0c0032;
+  grid-area: footer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  background-color: #282828;
+  color: white;
+}
+
+.main-nav {
+  display: flex;
+}
+
+.main-nav__item {
+  margin: 0 25px;
+  padding: 0.5rem 1rem;
+  background-color: #0c0032;
+  border-radius: 5px;
+}
+.main-nav__item a {
+  color: white;
+  text-decoration: none;
+}
+.main-nav__item:hover {
+  cursor: pointer;
+  animation: wiggle;
+  animation-duration: 400ms;
+  animation-iteration-count: infinite;
+}
+
+.main-brand {
+  margin: 0 25px;
+  padding: 0.5rem 1rem;
+  background-color: #0c0032;
+  border-radius: 5px;
+}
+.main-brand a {
+  color: white;
+  text-decoration: none;
+}
+.main-brand:hover {
+  cursor: pointer;
+  animation: wiggle;
+  animation-duration: 400ms;
+  animation-iteration-count: infinite;
+}
+
+@keyframes wiggle {
+  from {
+    transform: rotateZ(0);
+  }
+  25% {
+    transform: rotateZ(2.5deg);
+  }
+  50% {
+    transform: rotateZ(0);
+  }
+  75% {
+    transform: rotateZ(-2.5deg);
+  }
+  to {
+    transform: rotateZ(0);
+  }
+}
+.content {
+  height: 300px;
+  width: 98%;
+  max-width: 450px;
+  margin-top: 5rem;
+  background-color: white;
+  animation: form-down;
+  animation-duration: 0.5s;
+  border-radius: 0.8rem;
+  padding: 1rem;
+  color: #0c0032;
+}
+
+@keyframes form-down {
+  from {
+    transform: translateY(-400px);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+main {
+  display: flex;
+  justify-content: center;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.game {
+  width: 100%;
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 1px;
+  height: 80%;
+}
+.game div {
+  background-color: grey;
+}
+
+.game-block {
+  font-size: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.game-block:hover {
+  cursor: pointer;
+}
+
+.fact {
+  color: #3500d3;
+}
+
+.waiting:before {
+  animation: waiting;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  font-size: 2rem;
+  content: "Waiting for player";
+}
+
+@keyframes waiting {
+  from {
+    content: "Waiting for player";
+  }
+  25% {
+    content: "Waiting for player.";
+  }
+  50% {
+    content: "Waiting for player..";
+  }
+  75% {
+    content: "Waiting for player...";
+  }
+  to {
+    content: "Waiting for player";
+  }
+}
+
+/*# sourceMappingURL=waiting.css.map */
